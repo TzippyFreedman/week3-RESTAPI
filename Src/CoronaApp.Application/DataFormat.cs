@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace week2.Data
+namespace CoronaApp.Api
 {
     public static class DataFormat
     {

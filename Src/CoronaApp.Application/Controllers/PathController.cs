@@ -16,12 +16,12 @@ namespace CoronaApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LocationController : ControllerBase
+    public class PathController : ControllerBase
     {
        
 
         private readonly IMapper _mapper;
-        public LocationController(IMapper mapper)
+        public PathController(IMapper mapper)
         {
             _mapper = mapper;
 
