@@ -1,6 +1,6 @@
 ﻿namespace CoronaApp.Services.Entities
 {
-    public class PathSearchModel
+    public class PathSearch
     {
     }
 }
