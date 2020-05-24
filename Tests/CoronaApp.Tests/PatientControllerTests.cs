@@ -19,7 +19,7 @@ namespace CoronaApp.Tests
             var client = _factory.CreateClient();
 
             // Act
-            var response = await client.GetAsync("/api/patient/000000018");
+            var response = await client.GetAsync("/api/patient/1");
 
             // Assert
             response.EnsureSuccessStatusCode(); 
