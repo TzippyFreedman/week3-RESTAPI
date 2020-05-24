@@ -14,7 +14,7 @@ namespace CoronaApp.Dal
       
         }
 
-        public void Save(Patient patient)
+        public void U(Patient patient)
         {
 
         }
