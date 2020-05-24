@@ -1,6 +1,7 @@
 ﻿
 
-using CoronaApp.Api.Models;
+
+using CoronaApp.Services.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,8 +11,8 @@ namespace CoronaApp.Services
 {
     public interface IPatientRepository
     {
-        PatientModel Get(string id);
+        Patient Get(string id);
 
-        void Save(PatientModel patient);
+        void Save(Patient patient);
     }
 }

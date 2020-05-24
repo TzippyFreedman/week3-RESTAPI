@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CoronaApp.Services.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using week2.Data.Entities;
+
 
 namespace week2.Data
 {

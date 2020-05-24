@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-
-using CoronaApp.Services.Models;
+using CoronaApp.Api.Models;
+using CoronaApp.Services.Entities;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,7 +34,7 @@ namespace CoronaApp.Api.Controllers
         [EnableCors]
         // GET: api/Path/5
         [HttpGet("{id:int}")]
-        public ActionResult<Patient> Get(int id)
+        public ActionResult<PatientModel> Get(int id)
         {
             try
             {
