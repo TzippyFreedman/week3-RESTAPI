@@ -9,6 +9,6 @@ namespace CoronaApp.Services
 {
     public interface ILocationRepository
     {
-      //  ICollection<Path> Get(PathSearch locationSearch);
+        ICollection<Path> Get(PathSearch locationSearch);
     }
 }
