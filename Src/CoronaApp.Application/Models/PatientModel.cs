@@ -1,4 +1,6 @@
-﻿namespace CoronaApp.Api.Models
+﻿using System.Collections.Generic;
+
+namespace CoronaApp.Api.Models
 {
     public class PatientModel
     {

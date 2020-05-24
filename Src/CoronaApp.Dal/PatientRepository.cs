@@ -7,16 +7,17 @@ using System.Text;
 
 namespace CoronaApp.Dal
 {
-    class PatientRepository : IPatientRepository
-    {
-        public Patient Get(string id)
-        {
-      
-        }
+    class PatientRepository { }
+    //   : IPatientRepository
+    //{
+    //    public Patient Get(string id)
+    //    {
 
-        public void U(Patient patient)
-        {
+    //    }
 
-        }
-    }
+    //    public void Update(Patient patient)
+    //    {
+
+    //    }
+    //}
 }
