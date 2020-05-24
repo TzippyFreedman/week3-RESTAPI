@@ -1,6 +1,8 @@
-﻿namespace CoronaApp.Services.Models
+﻿using System.Collections.Generic;
+
+namespace CoronaApp.Services.Models
 {
-    public class PatientModel
+    public class PathModel
     {
         public string City { get; set; }
         public string StartDate { get; set; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using CoronaApp.Dal.Entities;
+//using CoronaApp.Entities;
 using CoronaApp.Services.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
@@ -29,7 +29,7 @@ namespace CoronaApp.Api.Controllers
         [EnableCors]
         [HttpGet]
 
-        public ActionResult<List<PathModel>> Get()
+        public ActionResult<List<Path>> Get()
         {
 
             try
@@ -37,7 +37,7 @@ namespace CoronaApp.Api.Controllers
                 List<Path> paths = DataFormat.GetAllPaths();
                 if (paths == null) return NotFound("Couldn't find any paths");
                 // if (!paths.Any()) return BadRequest("Couldn't find any paths");
-                return _mapper.Map<List<PathModel>>(paths);
+                return _mapper.Map<List<Path>>(paths);
             }
             catch (Exception)
             {
@@ -48,7 +48,7 @@ namespace CoronaApp.Api.Controllers
 
 
         [HttpGet("{city}")]
-        public ActionResult<List<PathModel>> Get(string city)
+        public ActionResult<List<Path>> Get(string city)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace CoronaApp.Api.Controllers
                 List<Path> PathsInCity = paths.FindAll(path => path.City == city);
                 // if (sortedPath != null && !sortedPath.Any())
                 // return NotFound($"Couldn't find any paths in city {city}");
-                return _mapper.Map<List<PathModel>>(PathsInCity);
+                return _mapper.Map<List<Path>>(PathsInCity);
             }
             catch (Exception)
             {

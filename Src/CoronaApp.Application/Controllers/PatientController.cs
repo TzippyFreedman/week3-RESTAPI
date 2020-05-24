@@ -34,7 +34,7 @@ namespace CoronaApp.Api.Controllers
         [EnableCors]
         // GET: api/Path/5
         [HttpGet("{id:int}")]
-        public ActionResult<PatientModel> Get(int id)
+        public ActionResult<Patient> Get(int id)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace CoronaApp.Api.Controllers
                 {
                     return NotFound($"patient with id:{id} was not found");
                 }
-                return _mapper.Map<PatientModel>(patient);
+                return _mapper.Map<Patient>(patient);
             }
             catch (Exception e)
             {
@@ -56,7 +56,7 @@ namespace CoronaApp.Api.Controllers
 
         // POST: api/Path
         [HttpPost]
-        public ActionResult<PatientModel> Post(PatientModel newPatient)
+        public ActionResult<Patient> Post(Patient newPatient)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace CoronaApp.Api.Controllers
                 Patient patient = _mapper.Map<Patient>(newPatient);
                 patients.Add(patient);
 
-                return Created(newPatientURI, _mapper.Map<PatientModel>(patient));
+                return Created(newPatientURI, _mapper.Map<Patient>(patient));
 
 
             }
@@ -94,7 +94,7 @@ namespace CoronaApp.Api.Controllers
 
         // PUT: api/Path/5
         [HttpPut]
-        public ActionResult<PatientModel> Put(PatientModel updatedPatient)
+        public ActionResult<Patient> Put(Patient updatedPatient)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace CoronaApp.Api.Controllers
                     return NotFound($"patient with id:{updatedPatient.PatientId} was not found");
                 }
                 _mapper.Map(updatedPatient, patientToUpdate);
-                return _mapper.Map<PatientModel>(patientToUpdate);
+                return _mapper.Map<Patient>(patientToUpdate);
             }
             catch (Exception e)
             {

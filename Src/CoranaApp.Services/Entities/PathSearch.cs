@@ -1,6 +1,6 @@
 ﻿namespace CoronaApp.Services.Models
 {
-    public class LocationSearchModel
+    public class PathSearchModel
     {
     }
 }
