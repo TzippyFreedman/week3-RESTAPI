@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoronaApp.Dal\CoronaApp.Dal.csproj" />
+    <ProjectReference Include="..\CoronaApp.Application\CoronaApp.Api.csproj" />
   </ItemGroup>
 
 </Project>
