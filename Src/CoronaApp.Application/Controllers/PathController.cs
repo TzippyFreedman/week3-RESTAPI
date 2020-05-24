@@ -50,7 +50,7 @@ namespace CoronaApp.Api.Controllers
 
 
         [HttpGet("{city}")]
-        public ActionResult<List<Path>> Get(string city)
+        public ActionResult<List<PathModel>> Get(string city)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace CoronaApp.Api.Controllers
                 List<Path> PathsInCity = paths.FindAll(path => path.City == city);
                 // if (sortedPath != null && !sortedPath.Any())
                 // return NotFound($"Couldn't find any paths in city {city}");
-                return _mapper.Map<List<Path>>(PathsInCity);
+                return _mapper.Map<List<PathModel>>(PathsInCity);
             }
             catch (Exception)
             {
